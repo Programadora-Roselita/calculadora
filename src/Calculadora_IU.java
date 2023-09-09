@@ -6,7 +6,6 @@ import javax.swing.JOptionPane;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author LABORATORIOA_PC10
@@ -65,6 +64,11 @@ public class Calculadora_IU extends javax.swing.JFrame {
         });
 
         txtMultiplicar.setText("MULTIPLICAR");
+        txtMultiplicar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtMultiplicarActionPerformed(evt);
+            }
+        });
 
         txtDividir.setText("DIVIDIR");
         txtDividir.addActionListener(new java.awt.event.ActionListener() {
@@ -129,8 +133,8 @@ public class Calculadora_IU extends javax.swing.JFrame {
 
         double nro1 = Double.parseDouble(txtnro1.getText());
         double nro2 = Double.parseDouble(txtnro2.getText());
-        double sumar= nro1+nro2;
-        JOptionPane.showMessageDialog(this, "La suma es:" +sumar);
+        double sumar = nro1 + nro2;
+        JOptionPane.showMessageDialog(this, "La suma es:" + sumar);
 
 
     }//GEN-LAST:event_btnSumarActionPerformed
@@ -141,11 +145,19 @@ public class Calculadora_IU extends javax.swing.JFrame {
 
     private void txtRestarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRestarActionPerformed
         // TODO add your handling code here:
+        double nro1 = Double.parseDouble(txtnro1.getText());
+        double nro2 = Double.parseDouble(txtnro2.getText());
+        double restar = nro1 + nro2;
+        JOptionPane.showMessageDialog(this, "La suma es:" + restar);
+    }//GEN-LAST:event_txtRestarActionPerformed
+
+    private void txtMultiplicarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMultiplicarActionPerformed
+        // TODO add your handling code here:
           double nro1 = Double.parseDouble(txtnro1.getText());
         double nro2 = Double.parseDouble(txtnro2.getText());
-        double restar= nro1+nro2;
-        JOptionPane.showMessageDialog(this, "La suma es:" +restar);
-    }//GEN-LAST:event_txtRestarActionPerformed
+        double multiplicar= nro1+nro2;
+        JOptionPane.showMessageDialog(this, "La multiplicacion es:" +multiplicar);
+    }//GEN-LAST:event_txtMultiplicarActionPerformed
 
     /**
      * @param args the command line arguments

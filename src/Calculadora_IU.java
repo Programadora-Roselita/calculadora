@@ -58,6 +58,11 @@ public class Calculadora_IU extends javax.swing.JFrame {
         jLabel2.setText("NRO1");
 
         txtRestar.setText("RESTAR");
+        txtRestar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtRestarActionPerformed(evt);
+            }
+        });
 
         txtMultiplicar.setText("MULTIPLICAR");
 
@@ -133,6 +138,14 @@ public class Calculadora_IU extends javax.swing.JFrame {
     private void txtDividirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDividirActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtDividirActionPerformed
+
+    private void txtRestarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRestarActionPerformed
+        // TODO add your handling code here:
+          double nro1 = Double.parseDouble(txtnro1.getText());
+        double nro2 = Double.parseDouble(txtnro2.getText());
+        double restar= nro1+nro2;
+        JOptionPane.showMessageDialog(this, "La suma es:" +restar);
+    }//GEN-LAST:event_txtRestarActionPerformed
 
     /**
      * @param args the command line arguments
